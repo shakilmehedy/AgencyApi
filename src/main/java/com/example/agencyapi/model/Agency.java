@@ -1,10 +1,14 @@
 package com.example.agencyapi.model;
+
+import jakarta.validation.constraints.NotBlank;
+
 public class Agency {
     private String id;
     private String name;
     private String code;
     private String description;
-
+    private String descriptionBd;
+    @NotBlank
     public String getId() {
         return id;
     }
@@ -12,7 +16,7 @@ public class Agency {
     public void setId(String id) {
         this.id = id;
     }
-
+    @NotBlank
     public String getName() {
         return name;
     }
@@ -20,7 +24,7 @@ public class Agency {
     public void setName(String name) {
         this.name = name;
     }
-
+    @NotBlank
     public String getCode() {
         return code;
     }
@@ -35,5 +39,13 @@ public class Agency {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescriptionBd() {
+        return descriptionBd;
+    }
+
+    public void setDescriptionBd(String descriptionBd) {
+        this.descriptionBd = descriptionBd;
     }
 }
